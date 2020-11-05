@@ -12,11 +12,6 @@ I used pure html and CSS with no special libraries. Some SVG files were used for
  
 ## Layout and organization
 All the sections are contained in their own blocks and some of the content is arranged within each block using flexbox properties.
-
-
-## File Management
-Each block has a folder with a respective CSS file which contains the styles which are applied to that block. All stylesheets are imported  
-into the index.css file. This helps to keep the stylesheet organized and also helps the html page to load faster.  
-
-## Improvements and modifications
+ 
+## Lessons from the project
 I have really learned a lot with this project. I have a better understanding of how media queries work and also about how to arrange items with flexbox.
