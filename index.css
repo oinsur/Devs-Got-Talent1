@@ -1,13 +1,358 @@
 /*Font from Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-/*CSS style folders*/
-@import url('/blocks/body/body.css');
-@import url('/blocks/page/page.css');
-@import url('/blocks/header/header.css');
-@import url('/blocks/social-data/social-data.css');
-@import url('/blocks/supporters/supporters.css');
-@import url('/blocks/data/data.css');
-@import url('/blocks/up-arrow/up-arrow.css');
-@import url('/blocks/down-arrow/down-arrow.css');
-@import url('/blocks/daily-count/daily-count.css');
-@import url('/blocks/daily-count-negative/daily-count-negative.css');
+
+.body {
+  margin: 0;
+  background-color: #1d1f29;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+.page {
+  max-width: 1875px;
+  min-width: 375px;
+  height: 100vh;
+  background-color: #1d1f29;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+/*Header styles*/
+.header {
+  width: 100%;
+  height: 233px;
+  background-color: #20222f;
+  border-radius: 0 0 5% 5%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 786px) {
+  .header__block {
+    flex-direction: row;
+    max-width: 1446px;
+    padding: 0 1em;
+  }
+}
+
+.header__block-item {
+  list-style: none;
+  width: 90%;
+}
+
+.header__block-item:last-child {
+  width: 18%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0;
+}
+
+@media screen and (max-width: 786px) {
+  .header__block-item:last-child {
+    border-top: 1px solid #8b97c8;
+    width: 90%;
+    padding-top: 1em;
+  }
+}
+
+.header__block-title {
+  margin: 1em 0 .5em;
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 786px) {
+  .header__block-title {
+    margin: 1em 0 0 .5em;
+    font-size: 2.5em;
+  }
+}
+
+.header__block-subtitle {
+  color: #8b97c8;
+  margin: 0;
+  font-size: 1em;
+  padding-bottom: 1.25em;
+  width: 90%;
+}
+
+@media screen and (min-width: 786px) {
+  .header__block-subtitle {
+    padding: 0;
+  }
+}
+
+.header__block-label {
+  font-size: 1em;
+  margin: 0;
+  color: #8b97c8;
+}
+
+.header__block-slider {
+  width: 60px;
+  border-radius: 30px;
+  border-style: none;
+  background: linear-gradient(90deg, rgba(51,148,225,1) 0%, rgba(53,210,140,1) 100%);
+}
+
+.header__block-switch {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #20222f;
+}
+
+/*Social data styles*/
+.social-data {
+  position: absolute;
+  top: 6.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .social-data {
+    top: 9.5em;
+  }  
+}
+
+/*Supporters styles*/
+.supporters {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 786px) {
+  .supporters {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1446px;
+  }
+}
+
+.supporters__block {
+  width: 333px;
+  height: 214px;
+  background-color: #252b43;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-top: 2em;
+}
+
+.supporters__block-top {
+  height: 3%;
+  background-color: #008cf8;
+}
+
+.supporters__block-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 31px;
+}
+
+.supporters__block-acct {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.supporters__block-logo {
+  width: 16px;
+}
+
+.supporters__block-FBlogo {
+  width: 16px;
+}
+
+.supporters__block-name {
+  margin: 0;
+  margin-left: .5em;
+  font-size: .75em;
+  color: #8b97c8;
+}
+
+.supporters__block-number {
+  margin: auto;
+  list-style: none;
+  font-size: 3em;
+  padding-top: .25em;
+}
+
+.supporters__block-label {
+  margin: auto;
+  list-style: none;
+  font-size: 2em;
+  letter-spacing: .15em;
+  color: #8b97c8;
+  line-height: .5em;
+}
+
+.supporters__block-changes {
+  display: flex;
+  align-items: baseline;
+  margin: auto;
+  padding-top: .75em;
+}
+
+.supporters__block-instagram {
+  height: 3%;
+  background: linear-gradient(90deg, rgba(253,194,95,1) 0%, rgba(225,70,149,1) 100%);
+}
+
+.supporters__block-icon {
+  width:16px;
+  background: linear-gradient(90deg, rgba(253,194,95,1) 0%, rgba(225,70,149,1) 100%);
+  border-radius: 30%;
+}
+
+.supporters__block-youtube {
+  height: 3%;
+  background-color: #c60025;
+}
+
+.supporters__block-icon-red {
+  width: 16px;
+  background-color: #c60025;
+  border-radius: 50%;
+}
+
+/*Data styles*/
+.data {
+  max-width: 1446px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 1em 1em;
+}
+
+@media screen and (max-width: 786px) {
+  .data {
+    justify-content: center;
+  }
+}
+
+.data__heading {
+  width: 90%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: flex;
+}
+
+.data__heading-text {
+  margin: 1em 0 0;
+  font-size: 1.5em;
+}
+
+.data__block {
+  width: 333px;
+  height: 164px;
+  background-color: #252b43;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+
+@media screen and (min-width: 786px) {
+  .data__block {
+    margin-top: 2em;
+  }
+}
+
+.data__block-items {
+  margin: 0;
+  padding: 0;
+}
+
+.data__block-label {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em;
+}
+
+.data__block-text {
+  color: #8b97c8;
+}
+
+.data__block-logo {
+  width: 1.75em;
+}
+
+.data__block-insta {
+  width: 1.5em;
+  height: 1.5em;
+  background: linear-gradient(90deg, rgba(253,194,95,1) 0%, rgba(225,70,149,1) 100%);
+  border-radius: 30%;
+}
+
+.data__block-youtube {
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #c60025;
+  border-radius: 50%;
+}
+
+.data__block-values {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+.data__block-value {
+  font-size: 2.25em;
+  margin: 0;
+}
+
+.data__block-changes {
+  display: flex;
+  align-items: baseline;
+}
+
+/*Arrow styles*/
+.up-arrow {
+  width: 0px;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #06b688 transparent;
+}
+
+.down-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #c60025 transparent transparent transparent;
+}
+
+/*daily count styles*/
+.daily-count {
+  margin-left: .5em;
+  color: #06b688;
+}
+
+.daily-count-negative {
+  margin-left: .5em;
+  color: #c60025;
+}
